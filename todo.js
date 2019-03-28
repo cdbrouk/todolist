@@ -11,8 +11,8 @@ function saveToDos(){
 }
 
 function deleteToDo(event){
-    const btn = event.target;
-    const li = btn.parentNode;
+    event.preventDefault();
+    const li = this.parentNode;
     toDoList.removeChild(li);
     const cleanToDos = toDos.filter(function(toDo){
         return toDo.id != parseInt(li.id); 
